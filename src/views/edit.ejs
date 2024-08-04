@@ -1,0 +1,24 @@
+<form action="/edit-user" method="post">
+    <fieldset>
+        <legend>Edit User</legend>
+        <div class="input-group">
+            <label for="">Id:</label>
+            <input readonly="text" name="userId" value="<%=user.id%>">
+        </div>
+        <div class="input-group">
+            <label for="">Email:</label>
+            <input type="text" name="email" id="emailId" value="<%=user.email%>">
+        </div>
+        <div class="input-group">
+            <label for="">Name:</label>
+            <input type="text" name="name" id="myname" value="<%=user.name%>">
+        </div>
+        <div class="input-group">
+            <label for="">City:</label>
+            <input type="text" name="city" id="idCity" value="<%=user.city%>">
+        </div>
+        <div>
+            <button>Save</button>
+        </div>
+    </fieldset>
+</form>
