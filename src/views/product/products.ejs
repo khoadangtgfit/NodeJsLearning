@@ -1,0 +1,23 @@
+<% include('layout') %>
+<% layout('layout') -%>
+
+<% title = 'Product List' %>
+
+<div class="container mt-5">
+  <h1 class="mb-4">Product List</h1>
+  <div class="row">
+    <% products.forEach(product => { %>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title"><%= product.name %></h5>
+            <h6 class="card-subtitle mb-2 text-muted">$<%= product.price %></h6>
+            <p class="card-text"><%= product.description %></p>
+            <p class="card-text"><small class="text-muted">Category: <%= product.category %></small></p>
+            <p class="card-text"><small class="text-muted">Stock: <%= product.stock %></small></p>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</div>
